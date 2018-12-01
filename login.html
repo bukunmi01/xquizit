@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration system PHP and MySQL</title>
+  <link rel="stylesheet" type="text/css" href="style1.css">
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+     <!-- Navbar Area -->
+        <div class="credit-main-menu" id="sticker">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="creditNav">
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="#">Pages</a>
+                                        <ul class="dropdown">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="services.html">Services</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="login.html">Login(for trainers)</a></li>
+                                    <li><a href="register.html">Sign Up as a trainee</a></li>
+                                </ul>
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+
+                        <!-- Contact -->
+                        <div class="contact">
+                            <a href="#"><img src="img/core-img/call2.png" alt=""> +234 708 151 6841</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+<!--    <?php echo $_SERVER["PHP_SELF"]; ?>-->
+    
+<!--
+    <?php
+        $name=""; $name_err="";
+        $password="";
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
+        if (empty($_POST["name"])){
+            $name_err="Name is required";
+        }else{
+        $name = test_input($_POST["name"]);
+        $password = test_input($_POST["password"]);
+    }
+    } 
+    function test_input($data){
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+    ?>
+    
+-->
+    <div class="header">
+        <h2>Login</h2>
+    </div>
+	 
+    <form method="post" action="#">
+        <div class="input-group">
+            <label>Username</label>
+            <input type="text" name="name" value="">
+            <span style="color:red;">* <?php echo $name_err;?>
+            </span>
+        </div>
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" name="password" value="">
+        </div>
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" name="email" value="">
+        </div>
+        <div class="input-group">
+            <button type="submit" class="btn" name="login_user">Login</button>
+        </div>
+        <p>
+            Not yet a member? <a href="register.html">Sign up</a>
+        </p>
+    </form>
+    
+<!--
+    <?php
+        echo "<h1>Output</h1>";
+        echo "Your username is ".$name."<br>";
+        echo "Your password is ".$password."<br>";
+    ?>
+-->
+
+</body>
+</html>
